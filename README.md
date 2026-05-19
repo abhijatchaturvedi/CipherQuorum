@@ -3,10 +3,10 @@
 > Threshold secret sharing for teams that want local-first recovery without a
 > central server.
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![CI](https://github.com/abhijatchaturvedi/CipherQuorum/actions/workflows/ci.yml/badge.svg)](https://github.com/abhijatchaturvedi/CipherQuorum/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-0f766e.svg)](LICENSE)
-[![Crypto](https://img.shields.io/badge/crypto-Shamir%20SSS%20%2B%20AES--GCM-7c3aed)](docs/architecture.md)
+[Python](https://www.python.org/)
+[CI](https://github.com/abhijatchaturvedi/CipherQuorum/actions/workflows/ci.yml)
+[License: MIT](LICENSE)
+[Crypto](docs/architecture.md)
 
 CipherQuorum is an open-source Python CLI for **Shamir Secret Sharing**,
 **threshold cryptography**, and **encrypted peer-to-peer secret recovery** over a
@@ -45,12 +45,14 @@ Most small teams either centralize secrets in one person's account, store
 encrypted files somewhere shared, or depend on a hosted vault. CipherQuorum is
 for cases where the recovery process itself should be distributed:
 
-| Use Case | How CipherQuorum Helps |
-| --- | --- |
-| Shared API keys | Split one key across multiple trusted maintainers. |
-| Private certificates | Recover only when enough peers participate. |
-| Student team infrastructure | Avoid a cloud dependency for LAN demos. |
-| Security education | Study Shamir Secret Sharing, mDNS, TCP framing, and AEAD. |
+
+| Use Case                    | How CipherQuorum Helps                                    |
+| --------------------------- | --------------------------------------------------------- |
+| Shared API keys             | Split one key across multiple trusted maintainers.        |
+| Private certificates        | Recover only when enough peers participate.               |
+| Student team infrastructure | Avoid a cloud dependency for LAN demos.                   |
+| Security education          | Study Shamir Secret Sharing, mDNS, TCP framing, and AEAD. |
+
 
 ## Install
 
@@ -104,13 +106,15 @@ connections, performs an X25519 handshake, and sends each peer one encrypted sha
 
 ## Commands
 
-| Command | Purpose |
-| --- | --- |
-| `cipherquorum split-local` | Print share tokens for offline use. |
-| `cipherquorum recover-local` | Recover a secret from share tokens. |
-| `cipherquorum listen` | Advertise a peer and receive one encrypted share. |
-| `cipherquorum split` | Discover peers and send encrypted shares. |
-| `cipherquorum recover` | Collect threshold shares over the LAN and recover. |
+
+| Command                      | Purpose                                            |
+| ---------------------------- | -------------------------------------------------- |
+| `cipherquorum split-local`   | Print share tokens for offline use.                |
+| `cipherquorum recover-local` | Recover a secret from share tokens.                |
+| `cipherquorum listen`        | Advertise a peer and receive one encrypted share.  |
+| `cipherquorum split`         | Discover peers and send encrypted shares.          |
+| `cipherquorum recover`       | Collect threshold shares over the LAN and recover. |
+
 
 ## Project Layout
 
@@ -136,14 +140,6 @@ configured threshold of valid shares. Fewer shares are useless for reconstructio
 The LAN path requires `cryptography` and `zeroconf`.
 
 Read the deeper design notes in [docs/architecture.md](docs/architecture.md).
-
-## Repository Topics
-
-For better GitHub discovery, add these topics to the repository:
-
-`python`, `cryptography`, `shamir-secret-sharing`, `secret-sharing`,
-`threshold-cryptography`, `cybersecurity`, `cli`, `p2p`, `mdns`, `zeroconf`,
-`aes-gcm`, `x25519`, `local-first`, `secret-management`, `lan`.
 
 ## Contributing
 
